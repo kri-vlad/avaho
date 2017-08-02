@@ -1,0 +1,215 @@
+.apartments {
+	background-color: #f3f3f3;
+	&__wrapper {
+		padding: 50px 60px 0 60px;
+		max-width: 1260px;
+		margin: 0 auto;
+		@media @tablet-widths {
+			max-width: 850px;
+		}
+		@media @mobile-widths {
+			padding: 15px 30px 0 30px;
+		}
+	}
+	&__title {
+		font-family: @font;
+		font-weight: 400;
+		font-size: 22px;
+		color: #333;
+		padding-left: 30px;
+		position: relative;
+		margin-bottom: 24px;
+		&::after {
+			position: absolute;
+			top: -5px;
+			left: 0;
+			content: '';
+			display: block;
+			width: 28px;
+			height: 29px;
+			background: url('../img/building.svg') no-repeat center;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media @mobile-widths {
+			justify-content: center;
+		}
+	}
+	&__item {
+		width: 405px;
+		height: 525px;
+		position: relative;
+		margin-bottom: 20px;
+		border: 1px solid silver;
+		cursor: pointer;
+		transition: all 0.5s;
+		&:hover {
+			box-shadow: 0 0 7px 2px #ccc;
+			border: 1px solid dodgerblue;
+
+			.apartments__link {
+				opacity: 0.8;
+			}
+		}
+		&--sales {
+			cursor: inherit;
+			padding: 155px 40px 30px 40px;
+			box-sizing: border-box;
+			position: relative;
+			&:hover {
+				box-shadow: none;
+				border: 1px solid silver;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: 1000;
+				top: 40px;
+				left: 30px;
+				display: block;
+				background: url('../img/discount.svg') no-repeat center;
+				width: 71px;
+				height: 71px;
+				@media @mobile-widths {
+					top: 15px;
+					left: 10px;
+				}
+			}
+			@media @mobile-widths {
+				padding-top: 100px;
+				padding-left: 20px;
+			}
+		}
+		@media @mobile-widths {
+			width: 100%;
+			max-width: 405px;
+			height: auto;
+			&:nth-child(odd) {
+				margin-right: 20px;
+			}
+		}
+	}
+	&__image {
+		@media @mobile-widths {
+			width: 100%;
+			height: auto;
+			max-width: 405px;
+		}
+	}
+	&__developer {
+		position: absolute;
+		top: 195px;
+		left: 15px;
+		color: white;
+		font-family: @font;
+		font-weight: 400;
+		@media @mobile-widths {
+			top: 20px
+		}
+	}
+	&__description {
+		padding: 20px 15px;
+	}
+	&__title-item {
+		color: #3785ff;
+		font-family: @font;
+		font-weight: 700;
+		font-size: 18px;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	&__city {
+		display: block;
+		font-family: @font;
+		font-weight: 400;
+		font-size: 14px;
+		color: silver;
+		margin-bottom: 5px;
+	}
+	&__class {
+		font-family: @font;
+		font-size: 15px;
+		font-weight: 400;
+		color: #333;
+		display: block;
+	}
+	&__metro {
+		display: block;
+		font-family: @font;
+		font-weight: 400;
+		font-size: 14px;
+		color: #333;
+	}
+	&__time {
+		display: inline-block;
+		font-family: @font;
+		font-weight: 400;
+		font-size: 14px;
+		color: #a1a1a1;
+		margin-left: 5px;
+	}
+	&__delivery {
+		display: inline-block;
+		padding: 5px;
+		margin: 18px 0;
+		font-family: @font;
+		font-weight: 400;
+		font-size: 14px;
+		color: #333;
+		background: #ffeebb;
+	}
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	&__table-cell {
+		border-top: 1px solid #e6e6e6;
+		border-bottom: 1px solid #e6e6e6;
+		text-align: center;
+		font-family: @font;
+		font-weight: 400;
+		color: #333;
+		padding: 10px 0;
+	}
+	&__list-sales {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	&__item-sales {
+		margin-bottom: 20px;
+	}
+	&__link-sales {
+		color: #3d82ff;
+		font-family: @font;
+		font-weight: 400;
+		text-decoration: none;
+		transition: all 0.5s;
+		&:hover {
+			color: #62a6ff;
+		}
+		@media @mobile-widths {
+			font-size: 14px;
+		}
+	}
+	&__phone {
+		font-family: @font;
+		font-weight: 700;
+		font-size: 22px;
+		color: #333;
+		margin: 40px 0 30px 0;
+		display: block;
+		text-decoration: none;
+		transition: all 0.5s;
+		&:hover {
+			opacity: 0.7;
+		}
+		@media @mobile-widths {
+			margin: 20px 0;
+			font-size: 18px;
+		}
+	}
+}

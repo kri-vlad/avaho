@@ -1,0 +1,67 @@
+.phone {
+	background-color: white;
+	&__wrapper {
+		padding: 74px 60px 55px 60px;
+		max-width: 1260px;
+		margin: 0 auto;
+		background: url('../img/phone_bg.jpg') no-repeat center;
+		background-size: 100%;
+		@media @tablet-widths {
+			padding: 54px 60px 35px 60px;
+		}
+		@media @mobile-widths {
+			background: none;
+			padding: 30px;
+		}
+	}
+	&__title {
+		font-family: @font;
+		font-weight: 400;
+		font-size: 22px;
+		text-align: center;
+		color: #333;
+		@media @tablet-widths {
+			font-size: 20px;
+		}
+	}
+	&__number {
+		font-family: @font;
+		font-weight: 700;
+		font-size: 36px;
+		text-align: center;
+		color: #333;
+		margin: 25px auto 30px auto;
+		display: block;
+		text-decoration: none;
+		transition: all 0.5s;
+		&:hover {
+			opacity: 0.7;
+		}
+		@media @tablet-widths {
+			font-size: 28px;
+		}
+	}
+	&__order {
+		background-color: #4c9ce0;
+		display: block;
+		width: 260px;
+		margin: 0 auto;
+		font-family: @font;
+		font-weight: 700;
+		font-size: 18px;
+		padding: 10px 20px;
+		box-sizing: border-box;
+		color: white;
+		text-decoration: none;
+		border-radius: 3px;
+		text-align: center;
+		transition: all 0.5s;
+		&:hover {
+			background-color: #56b2ff;
+		}
+		@media @tablet-widths {
+			font-size: 16px;
+			width: 230px;
+		}
+	}
+}
