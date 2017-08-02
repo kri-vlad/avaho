@@ -988,3 +988,13 @@ template {
     font-size: 18px;
   }
 }
+@media (max-width: 740px) {
+  .special__item:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 895px) {
+  .apartments__item:nth-child(odd) {
+    margin-right: 0;
+  }
+}
